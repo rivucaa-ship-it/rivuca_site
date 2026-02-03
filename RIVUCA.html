@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RIVUCA — Tecnología clara, sin ruido</title>
+  <meta name="description" content="RIVUCA: automatización de procesos, datos e IA aplicada para empresas. Tecnología clara, sin ruido." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --line:#e2e8f0;
+      --brand:#0b2545;      /* azul cantábrico */
+      --brand2:#0ea5a4;     /* acento suave */
+      --card:#f8fafc;
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1080px;margin:0 auto;padding:28px}
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:12px 0;
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:0.5px
+    }
+    .pill{
+      border:1px solid var(--line); padding:8px 12px;border-radius:999px;color:var(--muted);
+      font-size:14px;
+    }
+    .hero{
+      padding:56px 0 28px;
+      display:grid;grid-template-columns:1.2fr 0.8fr;gap:28px;align-items:center;
+    }
+    .h1{font-size:46px;line-height:1.05;margin:0 0 14px}
+    .sub{font-size:18px;color:var(--muted);margin:0 0 20px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 16px;border-radius:12px;border:1px solid var(--line);
+      font-weight:600; font-size:15px;
+      background:#fff;
+    }
+    .btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+    .btn.primary:hover{opacity:.92}
+    .btn:hover{background:#f1f5f9}
+    .box{
+      border:1px solid var(--line); border-radius:var(--radius);
+      background:linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      padding:18px;
+    }
+    .kpi{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+    .kpi div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}
+    .kpi .n{font-weight:700;color:var(--brand);font-size:20px}
+    .kpi .t{color:var(--muted);font-size:13px}
+    section{padding:28px 0;border-top:1px solid var(--line)}
+    h2{margin:0 0 14px;font-size:26px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+    .card h3{margin:0 0 8px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .step{border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+    .tag{display:inline-block;background:rgba(14,165,164,.12);color:var(--brand2);
+      border:1px solid rgba(14,165,164,.25);padding:6px 10px;border-radius:999px;font-size:12px;font-weight:600}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .muted{color:var(--muted)}
+    .form{
+      display:grid;gap:10px
+    }
+    input, textarea{
+      width:100%; padding:12px 12px; border-radius:12px;
+      border:1px solid var(--line); font-family:inherit; font-size:14px;
+    }
+    textarea{min-height:110px;resize:vertical}
+    footer{padding:24px 0;color:var(--muted);font-size:13px}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid3,.steps,.two{grid-template-columns:1fr}
+      .h1{font-size:38px}
+    }
+    .demos{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:14px;
+    }
+    .demo-card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .demo-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .badge{
+      display:inline-block;
+      font-size:12px;
+      font-weight:700;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      background:#fff;
+    }
+    .demo-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:6px;
+    }
+    .btn.small{
+      padding:10px 12px;
+      border-radius:12px;
+      font-size:14px;
+    }
+    .btn.disabled{
+      pointer-events:none;
+      opacity:.55;
+    }
+    @media (max-width:900px){
+      .demos{grid-template-columns:1fr}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="nav">
+      <div class="brand">
+        <!-- Aquí puedes poner el icono RV como SVG -->
+        <span style="font-size:18px;">RIVUCA</span>
+        <span class="pill">Tecnología clara, sin ruido</span>
+      </div>
+      <a class="btn" href="#contacto">Contacto</a>
+    </header>
+
+    <main class="hero">
+      <div>
+        <h1 class="h1">Tecnología clara,<br>sin ruido.</h1>
+        <p class="sub">
+          Automatizamos procesos y ordenamos datos para que tu empresa trabaje mejor.
+          Sin jerga, sin promesas vagas, con soluciones mantenibles.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#contacto">Pedir una llamada (15 min)</a>
+          <a class="btn" href="#que-hacemos">Ver qué hacemos</a>
+          <a class="btn" href="#demos">Ver demos</a>
+        </div>
+      </div>
+
+      <aside class="box">
+        <span class="tag">Enfoque práctico</span>
+        <p class="muted" style="margin:10px 0 0;">
+          Proyectos pequeños o medianos con impacto real: ahorro de tiempo, menos errores,
+          mejor control y decisiones más claras.
+        </p>
+        <div class="kpi">
+          <div><div class="n">+Eficiencia</div><div class="t">menos tareas manuales</div></div>
+          <div><div class="n">+Calidad</div><div class="t">menos errores y retrabajo</div></div>
+          <div><div class="n">+Control</div><div class="t">datos ordenados y trazables</div></div>
+          <div><div class="n">+Claridad</div><div class="t">informes útiles</div></div>
+        </div>
+      </aside>
+    </main>
+
+    <section id="que-hacemos">
+      <h2>Qué hacemos</h2>
+      <div class="grid3">
+        <div class="card">
+          <h3>Automatización de procesos</h3>
+          <p>Reducimos tareas repetitivas: Excel, emails, informes, flujos internos y validaciones.</p>
+        </div>
+        <div class="card">
+          <h3>Datos e informes claros</h3>
+          <p>Unificamos información y creamos reporting simple y útil (sin “ruido” ni dashboards vacíos).</p>
+        </div>
+        <div class="card">
+          <h3>IA aplicada (cuando aporta)</h3>
+          <p>Clasificación, extracción de texto, alertas y detección de anomalías. Solo si mejora el resultado.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Cómo trabajamos</h2>
+      <div class="steps">
+        <div class="step">
+          <h3>1) Diagnóstico</h3>
+          <p class="muted">30–45 min para entender el problema, el impacto y el alcance real.</p>
+        </div>
+        <div class="step">
+          <h3>2) Propuesta cerrada</h3>
+          <p class="muted">Objetivo, entregables, plazo y precio. Sin sorpresas.</p>
+        </div>
+        <div class="step">
+          <h3>3) Entrega + documentación</h3>
+          <p class="muted">Solución instalada, explicada y mantenible. Si necesitas soporte, lo pactamos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Para quién</h2>
+      <div class="two">
+        <div class="card">
+          <h3>Pymes y equipos operativos</h3>
+          <p class="muted">Servicios, industria, logística, hostelería, educación. Especialmente si no hay IT interno o está saturado.</p>
+        </div>
+        <div class="card">
+          <h3>Problemas típicos</h3>
+          <p class="muted">Informes manuales, datos duplicados, procesos con errores, tareas repetitivas, falta de trazabilidad.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="demos">
+      <h2>Demos (ejemplos reales)</h2>
+      <p class="muted">
+        Ejemplos demostradores basados en datos ficticios pero realistas. Sirven para ver el resultado final antes de hablar de tu caso.
+      </p>
+    
+      <div class="demos">
+        <!-- DEMO A -->
+        <div class="demo-card">
+          <div class="demo-top">
+            <div>
+              <span class="badge">Demo A</span>
+              <h3 style="margin:10px 0 6px;font-size:18px;">Informe automático semanal</h3>
+              <p class="muted" style="margin:0;">
+                Consolidación de ventas/servicios + generación de informe PDF/Excel listo para enviar cada semana.
+              </p>
+            </div>
+          </div>
+          <div class="demo-actions">
+            <!-- Cambia la ruta al PDF real -->
+            <a class="btn small primary" href="assets/Informe_Semana_03_2026.pdf" target="_blank" rel="noopener">
+              Ver ejemplo (PDF)
+            </a>
+            <a class="btn small" href="#contacto">Quiero algo así</a>
+          </div>
+        </div>
+    
+        <!-- DEMO B -->
+        <div class="demo-card">
+          <div class="demo-top">
+            <div>
+              <span class="badge">Demo B</span>
+              <h3 style="margin:10px 0 6px;font-size:18px;">Facturas y documentos sin caos</h3>
+              <p class="muted" style="margin:0;">
+                Clasifica PDFs y extrae campos clave para generar un Excel listo para contabilidad (con trazabilidad).
+              </p>
+            </div>
+          </div>
+          <div class="demo-actions">
+            <a class="btn small primary" href="assets/DemoB.pdf" target="_blank" rel="noopener">Ver ejemplo (PDF)</a>
+            <a class="btn small" href="#contacto">Me interesa</a>
+          </div>
+        </div>    
+        
+        <!-- DEMO C -->
+        <div class="demo-card">
+          <div class="demo-top">
+            <div>
+              <span class="badge">Demo C</span>
+              <h3 style="margin:10px 0 6px;font-size:18px;">Alertas inteligentes de ventas y costes</h3>
+              <p class="muted" style="margin:0;">
+                Detecta caídas atípicas y márgenes anómalos para actuar rápido. Avisos claros, sin dashboards vacíos.
+              </p>
+            </div>
+          </div>
+          <div class="demo-actions">
+            <a class="btn small primary" href="assets/DemoC.pdf" target="_blank" rel="noopener">Ver ejemplo (PDF)</a>
+            <a class="btn small" href="#contacto">Me interesa</a>
+          </div>
+        </div>
+
+        <!-- DEMO D -->
+        <div class="demo-card">
+          <div class="demo-top">
+            <div>
+              <span class="badge">Demo D</span>
+              <h3 style="margin:10px 0 6px;font-size:18px;">Asistente privado (Academia)</h3>
+              <p class="muted" style="margin:0;">
+                Un chat que responde usando solo tu base interna (FAQs/políticas). Controlado y trazable.
+              </p>
+            </div>
+          </div>
+          <div class="demo-actions">
+            <a class="btn small primary" href="demo_d/index.html" target="_blank" rel="noopener">Abrir demo</a>
+            <a class="btn small" href="#contacto">Me interesa</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p class="muted">Cuéntame qué quieres mejorar y te digo si merece la pena (y cómo lo haría).</p>
+
+      <!-- Sustituye el action por tu servicio de formulario (Netlify Forms, Formspree, etc.) -->
+      <form class="form" action="#" method="post">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="text" name="empresa" placeholder="Empresa">
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="mensaje" placeholder="¿Qué proceso o problema quieres mejorar?"></textarea>
+        <button class="btn primary" type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <footer>
+      © <span id="y"></span> RIVUCA · Santander · <span class="muted">Tecnología clara, sin ruido</span>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
